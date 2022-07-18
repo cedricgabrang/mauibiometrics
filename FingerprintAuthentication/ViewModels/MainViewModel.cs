@@ -57,7 +57,7 @@ namespace MauiBiometrics.ViewModels
                     AllowAlternativeAuthentication = true,
                 };
 
-                var result = await CrossFingerprint.Current.AuthenticateAsync(dialogConfig);
+                var result = await _fingerprint.AuthenticateAsync(dialogConfig);
 
                 if (result.Authenticated)
                 {
